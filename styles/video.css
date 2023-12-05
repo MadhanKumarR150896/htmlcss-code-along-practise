@@ -1,0 +1,141 @@
+
+.main-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+  
+}
+
+@media (max-width:750px) {
+  .main-grid {
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+
+@media (min-width:751px) and (max-width:999px){
+  .main-grid {
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+}
+
+@media (min-width:1000px) {
+  .main-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.thumbnail-row{
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.thumbnail{
+  width:100%;
+}
+
+.timer{
+  background-color: black;
+  color: white;
+  position: absolute;
+  font-size: 10px;
+  font-family: arial;
+  font-weight: 500;
+  border-radius: 2px;
+  padding:4px;
+  bottom:8px;
+  right:5px;
+}
+
+.sub-grid{
+  display:grid;
+  grid-template-columns: 50px 1fr;
+}
+
+
+.profile-picture{
+  width:35px;
+  border-radius: 25px;
+}
+
+.container{
+  display: inline-block;
+  position: relative;
+}
+
+.tooltipp{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-family: roboto,arial;
+  background-color: rgb(245, 242, 242);
+  border-radius: 4px;
+  padding:10px;
+  width:200px;
+  top:50px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container:hover .tooltipp{
+  opacity:1;
+}
+
+.profile-picture-tooltip{
+  height:50px;
+  width:50px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.author-tooltip{
+  font-family: Arial;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 1px;
+}
+
+.subscribers-tooltip{
+  font-family: Arial;
+  color: rgb(94, 91, 91);
+  font-weight: bold;
+  font-size: 14px;
+  padding: 1px;
+}
+
+.video-title{
+  margin-top: 0;
+  font-weight: 700;
+  font-size:14px;
+  margin-bottom: 10px;
+  line-height: 20px;       
+}
+
+.video-link{
+  text-decoration: none;
+  color:black;
+}
+
+.video-author,
+.video-views{
+  font-size: 12px;
+  color:rgb(96, 96, 96);
+  margin-bottom: 4px;
+}
+
+@media (min-width:1000px) {
+  .video-title{
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width:1000px) {
+  .video-author,
+  .video-views{
+    font-size: 14px;
+  }
+}
